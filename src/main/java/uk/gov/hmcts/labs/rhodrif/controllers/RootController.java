@@ -25,8 +25,8 @@ public class RootController {
         @ApiResponse(responseCode = "404", description = "No welcome could be found")
     })
     @RequestMapping(value = "/", method = GET, produces = TEXT_PLAIN_VALUE)
-    
+
     public ResponseEntity<String> welcome() {
-        return ok("Welcome to labs-rhodrif application");
+        return ok("Welcome to your app, my favourite fruit is " + System.getenv("FAVOURITE_FRUIT"));
     }
 }
